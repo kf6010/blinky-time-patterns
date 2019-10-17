@@ -53,3 +53,4 @@ dkms.conf
 BUILD
 mbed_settings.pyc
 **~
+**.swp

@@ -8,10 +8,19 @@
  */
 DigitalOut red(LED_RED); 
  
+
+void toggle(void) 
+{
+	red = !red;
+}
+
+/* Create a periodic interrupt */
+Ticker tmr;
+
 int main() {
+	tmr.attach( toggle , 0.5);
+
     while (true) {  /* while _super-loop_ */
-        red = !red; /* toggle led state */
-        wait(0.5);    /* pause for 0.5s */
     }
 }
  
